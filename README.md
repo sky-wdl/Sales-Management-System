@@ -1,9 +1,9 @@
 # 武汉纺织大学 数据库原理及应用课程 期末设计作业
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+*反对996！*
 
-开发语言:Golang 1.20.4
-
-GoLand IDE 教育许可证信息:
+GoLand IDE 教育许可证信息（使用正版人人有责）:
 
     GoLand 2023.1.2
     Build #GO-231.9011.34, built on May 16, 2023
@@ -25,4 +25,6 @@ GoLand IDE 教育许可证信息:
     Non-Bundled Plugins:
     com.intellij.zh (231.283)
 
-本课程设计用到了**gorm**作为对数据库管理系统的访问和操作，作业更加详细的介绍待补充。
+本课程设计用到了**gorm**作为对数据库管理系统的访问和操作库，其可以防止SQL注入这样的攻击手段对系统进行非正常的访问。
+不过对于各个线程之间的异步与同步并未做处理，在实际的生产环境中是非常危险的，后续会往这方面做完善。
+作业更加详细的介绍待补充，例如整个架构是怎么样的，各个模块之间是怎么工作的等等等

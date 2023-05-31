@@ -12,7 +12,7 @@ func Login(loginUser *model.User) (err error) {
 			Where("userName = ? AND passWord = ?", loginUser.UserName, loginUser.Password).
 			First(&loginUser).Error
 		if err != nil {
-			log.Println("查询账号时出错，不知道是账号还是密码错了")
+			log.Println(err)
 			return err
 		}
 		return nil
