@@ -1,7 +1,7 @@
 package model
 
 type User struct {
-	ID       int8   `gorm:"column:ID"`
+	ID       int8   `gorm:"column:id"`
 	UserName string `gorm:"column:userName"`
 	Password string `gorm:"column:password"`
 	Level    int8   `gorm:"column:level"`

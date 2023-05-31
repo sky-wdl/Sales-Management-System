@@ -17,7 +17,7 @@ func Adduser(name, passwd string) (err error) {
 	}
 
 	err = userDb.Transaction(func(tx *gorm.DB) (err error) {
-		if err := userDb.Table("users").
+		if err := tx.Table("users").
 			Clauses(clause.OnConflict{DoNothing: true}).
 			Create(&userTemp).Error; err != nil {
 			return err
