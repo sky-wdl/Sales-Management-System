@@ -10,7 +10,7 @@ func Login(loginUser *model.User) (err error) {
 	err = userDb.Transaction(func(tx *gorm.DB) (err error) {
 		err = tx.Table("users").
 			Where("userName = ? AND passWord = ?", loginUser.UserName, loginUser.Password).
-			First(&loginUser).Error
+			Error
 		if err != nil {
 			log.Println(err)
 			return err

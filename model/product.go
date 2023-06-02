@@ -1,11 +1,11 @@
 package model
 
 type Product struct {
-	PK        int `gorm:"primarykey"`
-	Commodity string
-	Price     float32
-	Stock     int
-	Supplier  string
+	PK        int     `gorm:"primarykey"`
+	Commodity string  `gorm:"column:commodity"`
+	Price     float32 `gorm:"column:price"`
+	Stock     int     `gorm:"column:stock"`
+	Supplier  string  `gorm:"column:supplier"`
 }
 
 func (Product) TabName() string {

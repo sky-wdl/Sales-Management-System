@@ -24,7 +24,8 @@ func main() {
 
 	for true {
 		fmt.Println("1:增加产品\n2:增加用户\n3:等待功能更新")
-		_, err := fmt.Scanln(&userInput)
+		var err error = nil
+		_, err = fmt.Scan(&userInput)
 		if err != nil {
 			log.Println("user input error")
 			fmt.Println("输入读取出错，请重试")
@@ -35,7 +36,7 @@ func main() {
 			log.Println("Add Product")
 			if err = server.AddProduct(); err != nil {
 				log.Println("Unknown failure in adding product information")
-				fmt.Println("添加产品信息出现未知失败，将回到主菜单")
+				fmt.Println("添加产品信息出现失败，将回到主菜单")
 				continue
 			} else {
 				log.Println("Successfully added product information")
